@@ -1,0 +1,22 @@
+Upload file: 
+Go to psftp
+open 129.150.122.140
+
+Login your username and password
+
+put safecast.zip
+
+put incd.csv
+
+put BYAREA.txt
+
+
+
+Go to putty
+
+ls -al  (check if the files are uploaded to Hadoop)
+
+unzip safecast.zip (unzip the file that we uploaded in Hadoop)
+
+
+

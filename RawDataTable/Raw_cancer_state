@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS raw_cancer_state;
+CREATE EXTERNAL TABLE IF NOT EXISTS raw_cancer_state (AREA string, AGE_ADJUSTED_CI_LOWER double, AGE_ADJUSTED_CI_UPPER double, AGE_ADJUSTED_RATE double, COUNT bigint, EVENT_TYPE string, POPULATION bigint, RACE string, SEX string, SITE string, YEAR string, CRUDE_CI_LOWER double, CRUDE_CI_UPPER double, CRUDE_RATE double)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/data/cancerfile2/'
+TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+
+select * from raw_cancer_state limit 20;

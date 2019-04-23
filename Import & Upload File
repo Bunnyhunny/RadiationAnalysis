@@ -1,8 +1,8 @@
-Upload file: 
-Go to psftp
+#Upload file: 
+#Go to psftp
 open 129.150.122.140
 
-Login your username and password
+#Login your username and password
 
 put safecast.zip
 
@@ -12,14 +12,13 @@ put BYAREA.txt
 
 
 
+#Go to putty
 
+#check if the files are uploaded to Hadoop
+ls -al 
 
-
-Go to putty
-
-ls -al  (check if the files are uploaded to Hadoop)
-
-unzip safecast.zip (unzip the file that we uploaded in Hadoop)
+#unzip the file that we uploaded in Hadoop
+unzip safecast.zip
 
 
 
@@ -45,7 +44,8 @@ hdfs dfs -ls radiation/data/cancerfile2
 
 !connect jdbc:hive2://cis5200spr19-bdcsce-2.compute-608214094.oraclecloud.internal:2181,cis5200spr19-bdcsce-3.compute-608214094.oraclecloud.internal:2181,cis5200spr19-bdcsce-4.compute-608214094.oraclecloud.internal:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2?tez.queue.name=interactive bdcsce_admin
 
-create database group2;   (this is the database)
+# create database
+create database group2;  
 use group2;
 
 

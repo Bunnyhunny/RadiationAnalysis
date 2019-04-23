@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS raw_radiation;
+CREATE EXTERNAL TABLE IF NOT EXISTS raw_radiation (CapturedTime timestamp, Latitude double, Longitude double, Value BIGINT, Unit STRING, LocationName STRING, DeviceID STRING, MD5Sum STRING, Height string, Surface string, Radiation STRING, UploadedTime timestamp, LoaderID STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/data/masterfile/'
+TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+
+select * from raw_radiation limit 10;

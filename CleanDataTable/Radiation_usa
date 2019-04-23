@@ -1,4 +1,11 @@
+https://latitudelongitude.org/us/
+
+Lat-long coorditates for cities in United States are in range: Latitude from 19.50139 to 64.85694 and longitude from -161.75583 to -68.01197.
     
+
+
+
+
 DROP TABLE IF EXISTS radiation_usa;
 CREATE EXTERNAL TABLE radiation_usa (time int, lat double, long double, value double)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 

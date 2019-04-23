@@ -24,7 +24,7 @@ df['country'] = ''
 print(df[:5])
 
 
-api_key = "AIzaSyCS3YdpC3bhvxOSIiYCS8vmJ6qB-u00ViQ"
+api_key = "xxxx"
 
 
 def reverse_geocode(latlng):

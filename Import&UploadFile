@@ -27,6 +27,14 @@ hdfs dfs -mkdir radiation/data
 hdfs dfs -mkdir radiation/data/masterfile
 hdfs dfs -mkdir radiation/data/cancerfile1
 hdfs dfs -mkdir radiation/data/cancerfile2
+hdfs dfs -mkdir radiation/table
+hdfs dfs -mkdir radiation/table/radiation_1
+hdfs dfs -mkdir radiation/table/radiation_2
+hdfs dfs -mkdir radiation/table/radiation_clean
+hdfs dfs -mkdir radiation/table/radiation_top20
+hdfs dfs -mkdir radiation/table/radiation_usa_all
+hdfs dfs -mkdir radiation/table/radiation_usa
+hdfs dfs -mkdir radiation/table/radiation_city_usa
 hdfs dfs -ls radiation
 hdfs dfs -chmod -R o+w .
 

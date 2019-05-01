@@ -3,8 +3,6 @@
 """
 Created on Sat Apr 20 17:23:56 2019
  
-@author: Xuezhen Liang
-"""
  
  
 import pandas as pd, requests, logging, time
@@ -25,7 +23,7 @@ df['country'] = ''
 print(df[:5])
  
  
-api_key = "AIzaSyCS3YdpC3bhvxOSIiYCS8vmJ6qB-u00ViQ"
+api_key = "AIzaSyCS3YdpC3bhvxOSIiYCS8vmJ6qB-xxxxxx" # Use your own api_key
  
  
 def reverse_geocode(latlng):

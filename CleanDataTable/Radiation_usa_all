@@ -7,3 +7,6 @@ SELECT *
 FROM radiation_clean
 Where lat >= 19.50139 and lat <= 64.85694 and long >= -161.75583 and long <= -68.01197
 ORDER BY value DESC;
+
+
+select * from radiation_usa_all limit 20;

@@ -35,3 +35,6 @@ FROM radiation_2
 where mSv_value >=100 and year(time) >= 1900 and year(time) <=2019
  group by year(time), lat, long
  order by value desc;
+
+
+select * from radiation_clean limit 20;

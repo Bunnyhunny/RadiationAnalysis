@@ -1,4 +1,4 @@
---becasue we only have $200 Google platform credit, we need to reduce the table size in order for using Google Map API to finish the convertion
+--because we only have $200 Google platform credit, we need to reduce the table size in order for using Google Map API to finish the convertion
 
 
 DROP TABLE IF EXISTS radiation_usa;

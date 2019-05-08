@@ -6,3 +6,4 @@ INSERT OVERWRITE TABLE radiation_top20
 SELECT time, lat, long, max(value) as value
 FROM radiation_clean
 GROUP BY time ORDER BY value desc limit 20;
+

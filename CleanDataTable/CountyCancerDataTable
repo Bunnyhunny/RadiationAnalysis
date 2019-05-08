@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS cancer_avg_clean;
+CREATE EXTERNAL TABLE cancer_avg_clean (County string, State string, AnnualNumber bigint)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/table_cancer/cancer_avg_clean';
+INSERT OVERWRITE TABLE cancer_avg_clean
+SELECT
+substr(County, 2, length(County) - 1 ), trim(substr(State, 1, length(State) - 2)), AnnualNumber
+FROM raw_cancer_avg where AnnualNumber is not null;

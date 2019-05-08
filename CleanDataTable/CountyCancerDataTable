@@ -6,3 +6,6 @@ INSERT OVERWRITE TABLE cancer_avg_clean
 SELECT
 substr(County, 2, length(County) - 1 ), trim(substr(State, 1, length(State) - 2)), AnnualNumber
 FROM raw_cancer_avg where AnnualNumber is not null;
+
+
+select * from cancer_avg_clean limit 20;

@@ -16,3 +16,6 @@ STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/table_cancer/cancer_state_
 INSERT OVERWRITE TABLE cancer_state_clean
 SELECT State, AnnualNumber, year 
 FROM cancer_state_1 where year is not null;
+
+
+select * from cancer_state_clean limit 20;

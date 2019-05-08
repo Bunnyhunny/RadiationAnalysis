@@ -1,12 +1,3 @@
-DROP TABLE IF EXISTS cancer_avg_clean;
-CREATE EXTERNAL TABLE cancer_avg_clean (County string, State string, AnnualNumber bigint)
-ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
-STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/table_cancer/cancer_avg_clean';
-INSERT OVERWRITE TABLE cancer_avg_clean
-SELECT
-substr(County, 2, length(County) - 1 ), substr(State, 0, length(State) - 2), AnnualNumber
-FROM raw_cancer_avg where AnnualNumber is not null;
-
 
 DROP TABLE IF EXISTS cancer_state_1;
 CREATE TABLE cancer_state_1 (State string, AnnualNumber bigint, event_type string, year int, race string, sex string, site string)

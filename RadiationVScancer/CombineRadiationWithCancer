@@ -14,3 +14,6 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/table/radiationvscancer_avg/';
 INSERT OVERWRITE TABLE radiationvscancer_avg
 SELECT c.*, r.value  FROM  radiation_usa_avg r JOIN cancer_avg_clean c ON c.county = r.county and c.state = r.state;
+
+
+select * from radiationvscancer_avg limit 20;

@@ -13,3 +13,6 @@ INSERT OVERWRITE TABLE radiation_city_usa
 SELECT time, lat, long, value, county, state, country
 FROM raw_radiation_city_usa
 WHERE county <> '' and country<> '' and country = 'United States';  
+
+
+select * from radiation_city_usa limit 20;

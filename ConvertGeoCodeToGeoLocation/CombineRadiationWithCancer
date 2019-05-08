@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS radiation_usa_avg;
+CREATE EXTERNAL TABLE radiation_usa_avg (value double, county string, state string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/table/radiation_usa_avg/';
+INSERT OVERWRITE TABLE radiation_usa_avg
+SELECT round(avg(value),2) as value, county, state
+FROM radiation_city_usa
+Group by county, state; 
+
+
+DROP TABLE IF EXISTS radiationvscancer_avg;
+CREATE EXTERNAL TABLE radiationvscancer_avg (County string, State string, AnnualNumber bigint, value double)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/xliang18/radiation/table/radiationvscancer_avg/';
+INSERT OVERWRITE TABLE radiationvscancer_avg
+SELECT c.*, r.value  FROM  radiation_usa_avg r JOIN cancer_avg_clean c ON c.county = r.county and c.state = r.state;

@@ -10,3 +10,6 @@ SELECT time, round(lat,1) as lat, round(long,1) as long, max(value) as value
 FROM radiation_usa_all
 Where time >= 1999 and time <= 2015
 Group by time, round(lat,1), round(long,1);
+
+
+select * from radiation_usa limit 20;
